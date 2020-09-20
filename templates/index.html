@@ -3,7 +3,7 @@
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
   <meta charset="UTF-8">
-  <title>ML API</title>
+  <title>Frankfurt Stock Prediction</title>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
@@ -11,14 +11,17 @@
   
 </head>
 
-<body>
+<body style="background-color:Aquamarine">
  <div class="login">
 	<h1>Frankfurt Stock Prediction</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
+        <br>
     	<input type="text" name="high" placeholder="High" required="required" />
+        <br><br>
         <input type="text" name="open" placeholder="Open" required="required" />
+		<br><br>
 		<input type="text" name="close" placeholder="Close" required="required" />
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
